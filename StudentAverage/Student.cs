@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Linq;
+using System.IO;
+using System.Collections.Generic;
 
 namespace StudentAverage
 {
@@ -8,8 +11,11 @@ namespace StudentAverage
 
         public int[] Scores { get; set; }
 
-        public int? GetAverage()
+        public int GetAverage()
         {
+            double avg = Scores.Average();
+            int average = Convert.ToInt32(avg);
+            return average;
         }
     }
 }
